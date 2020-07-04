@@ -26,19 +26,19 @@
 
     
     
-      <link href="belaxie.github.io/index.xml" rel="alternate" type="application/rss+xml" title="bela的博客" />
-      <link href="belaxie.github.io/index.xml" rel="feed" type="application/rss+xml" title="bela的博客" />
+      <link href="belaxie.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="bela的博客" />
+      <link href="belaxie.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="bela的博客" />
       
     
     
-    <meta property="og:title" content="bela的博客" />
+    <meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="belaxie.github.io/" />
+<meta property="og:url" content="belaxie.github.io/posts.html" />
 <meta property="og:updated_time" content="2020-07-04T10:30:03+08:00" />
-<meta itemprop="name" content="bela的博客">
+<meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="bela的博客"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
 
 	
@@ -83,7 +83,7 @@
 
       <div class="tc-l pv3 ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          bela的博客
+          Posts
         </h1>
         
       </div>
@@ -93,46 +93,20 @@
 
     <main class="pb7" role="main">
       
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    
-  </article>
-  
-  
-  
-  
-  
-  
-  
-    
-    
-
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
+  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
       
-       
-          <h1 class="flex-none">
-            Recent Posts
-          </h1>
-        
-
-      
-
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="color-inherit dim link">
-            如何用hugo搭建个人博客
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="link black dim">
+        如何用hugo搭建个人博客
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
 一、安装hugo 查看官方文档进行安装，以下步骤若有不清楚的地方，文档上有详细的安装步骤可进行查看。
  点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。例如我的存放路径为D:\Software\hugo，那么配置就如下图所示：  启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。   二、搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。
 step2: 新建一个文件夹，在该目录下执行命令：hugo new site name.github.io-generator，注意name是你在github上的账户名，全小写。
@@ -143,70 +117,44 @@ step6： 打开config.toml文件，进行配置，要将图中的baseURL改为�
 执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
 若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。
 若要在github pages预览html文件，请见下一篇博客^-^
-        </div>
-          <a href="belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
     </div>
   </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+</div>
+</div>
       
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="belaxie.github.io/posts/secondblog.html" class="color-inherit dim link">
-            SecondBlog
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          第二篇博客 新的征途开始啦！
-        </div>
-          <a href="belaxie.github.io/posts/secondblog.html" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="belaxie.github.io/posts/secondblog.html" class="link black dim">
+        SecondBlog
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      第二篇博客 新的征途开始啦！
     </div>
   </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+</div>
+</div>
       
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="belaxie.github.io/posts/firstblog.html" class="color-inherit dim link">
-            FirstBlog
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          这是我的第一篇博客 请多指教
-        </div>
-          <a href="belaxie.github.io/posts/firstblog.html" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="belaxie.github.io/posts/firstblog.html" class="link black dim">
+        FirstBlog
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      这是我的第一篇博客 请多指教
     </div>
   </div>
-</article>
-
-          </div>
-        
-      </section>
-
+</div>
+</div>
       
+    </section>
 
-      </div>
-  
+</article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">

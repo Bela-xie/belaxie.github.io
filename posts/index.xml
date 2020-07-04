@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on bela的博客</title>
-    <link>belaxie.github.io/posts/</link>
+    <link>belaxie.github.io/posts.html</link>
     <description>Recent content in Posts on bela的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
@@ -13,10 +13,10 @@
     
     <item>
       <title>如何用hugo搭建个人博客</title>
-      <link>belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</link>
       <pubDate>Sat, 04 Jul 2020 10:30:03 +0800</pubDate>
       
-      <guid>belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
       <description>因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
 一、安装hugo 查看官方文档进行安装，以下步骤若有不清楚的地方，文档上有详细的安装步骤可进行查看。
  点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&amp;ndash;环境变量&amp;ndash;path中。例如我的存放路径为D:\Software\hugo，那么配置就如下图所示：  启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。   二、搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。
@@ -32,19 +32,19 @@ step6： 打开config.toml文件，进行配置，要将图中的baseURL改为�
     
     <item>
       <title>SecondBlog</title>
-      <link>belaxie.github.io/posts/secondblog/</link>
+      <link>belaxie.github.io/posts/secondblog.html</link>
       <pubDate>Fri, 03 Jul 2020 23:17:00 +0800</pubDate>
       
-      <guid>belaxie.github.io/posts/secondblog/</guid>
+      <guid>belaxie.github.io/posts/secondblog.html</guid>
       <description>第二篇博客 新的征途开始啦！</description>
     </item>
     
     <item>
       <title>FirstBlog</title>
-      <link>belaxie.github.io/posts/firstblog/</link>
+      <link>belaxie.github.io/posts/firstblog.html</link>
       <pubDate>Fri, 03 Jul 2020 18:46:37 +0800</pubDate>
       
-      <guid>belaxie.github.io/posts/firstblog/</guid>
+      <guid>belaxie.github.io/posts/firstblog.html</guid>
       <description>这是我的第一篇博客 请多指教</description>
     </item>
     
