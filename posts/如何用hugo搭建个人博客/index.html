@@ -27,31 +27,52 @@
     
     
     <meta property="og:title" content="如何用hugo搭建个人博客" />
-<meta property="og:description" content="尝试一下修改 因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
-第一步：安装hugo 查看官方文档进行安装，文档上有详细的安装步骤可进行查看。
- 点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。 启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。  第二步：搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
-若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。" />
+<meta property="og:description" content="因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
+一、安装hugo 查看官方文档进行安装，以下步骤若有不清楚的地方，文档上有详细的安装步骤可进行查看。
+ 点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。例如我的存放路径为D:\Software\hugo，那么配置就如下图所示：  启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。   二、搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。
+step2: 新建一个文件夹，在该目录下执行命令：hugo new site name.github.io-generator，注意name是你在github上的账户名，全小写。
+step3： 进入上一步创建的目录，即依次执行cd name.github.io-generator&mdash;git init&mdash;git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke&mdash;echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml，这一步的目的是下载博客网站的主题。
+step4: 执行hugo new posts/my-first-post.md，然后编辑第一篇博客的内容。注意不要修改原有的内容，修改后要将draft改为false。
+step5： 执行hugo server -D，可进行网站的预览。
+step6： 打开config.toml文件，进行配置，要将图中的baseURL改为自己github上的网址，将languageCode改为zh-Hans，title自定义自己想要的博客名称。 step7 执行hugo -D，创建public文件。
+执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
+若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。
+若要在github pages预览html文件，请见下一篇博客^-^" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="belaxie.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
 <meta property="article:published_time" content="2020-07-04T10:30:03+08:00" />
 <meta property="article:modified_time" content="2020-07-04T10:30:03+08:00" />
 <meta itemprop="name" content="如何用hugo搭建个人博客">
-<meta itemprop="description" content="尝试一下修改 因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
-第一步：安装hugo 查看官方文档进行安装，文档上有详细的安装步骤可进行查看。
- 点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。 启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。  第二步：搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
-若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。">
+<meta itemprop="description" content="因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
+一、安装hugo 查看官方文档进行安装，以下步骤若有不清楚的地方，文档上有详细的安装步骤可进行查看。
+ 点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。例如我的存放路径为D:\Software\hugo，那么配置就如下图所示：  启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。   二、搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。
+step2: 新建一个文件夹，在该目录下执行命令：hugo new site name.github.io-generator，注意name是你在github上的账户名，全小写。
+step3： 进入上一步创建的目录，即依次执行cd name.github.io-generator&mdash;git init&mdash;git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke&mdash;echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml，这一步的目的是下载博客网站的主题。
+step4: 执行hugo new posts/my-first-post.md，然后编辑第一篇博客的内容。注意不要修改原有的内容，修改后要将draft改为false。
+step5： 执行hugo server -D，可进行网站的预览。
+step6： 打开config.toml文件，进行配置，要将图中的baseURL改为自己github上的网址，将languageCode改为zh-Hans，title自定义自己想要的博客名称。 step7 执行hugo -D，创建public文件。
+执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
+若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。
+若要在github pages预览html文件，请见下一篇博客^-^">
 <meta itemprop="datePublished" content="2020-07-04T10:30:03&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-04T10:30:03&#43;08:00" />
-<meta itemprop="wordCount" content="18">
+<meta itemprop="wordCount" content="51">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何用hugo搭建个人博客"/>
-<meta name="twitter:description" content="尝试一下修改 因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
-第一步：安装hugo 查看官方文档进行安装，文档上有详细的安装步骤可进行查看。
- 点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。 启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。  第二步：搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
-若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。"/>
+<meta name="twitter:description" content="因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。
+一、安装hugo 查看官方文档进行安装，以下步骤若有不清楚的地方，文档上有详细的安装步骤可进行查看。
+ 点击来到hugo release网页，查找最新版本，找到适用于本机系统的zip文件进行下载。 下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。例如我的存放路径为D:\Software\hugo，那么配置就如下图所示：  启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。   二、搭建博客 hugo官网上有很详细的步骤说明，点击进入hugo官网，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。
+step2: 新建一个文件夹，在该目录下执行命令：hugo new site name.github.io-generator，注意name是你在github上的账户名，全小写。
+step3： 进入上一步创建的目录，即依次执行cd name.github.io-generator&mdash;git init&mdash;git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke&mdash;echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml，这一步的目的是下载博客网站的主题。
+step4: 执行hugo new posts/my-first-post.md，然后编辑第一篇博客的内容。注意不要修改原有的内容，修改后要将draft改为false。
+step5： 执行hugo server -D，可进行网站的预览。
+step6： 打开config.toml文件，进行配置，要将图中的baseURL改为自己github上的网址，将languageCode改为zh-Hans，title自定义自己想要的博客名称。 step7 执行hugo -D，创建public文件。
+执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。
+若要创建第二篇博客，则需要在上述创建的根目录中再次执行hugo new posts/自定义博客题目.md，然后打开该文件进行博客的编辑，编辑完成后执行hugo -D，那么在public目录中就会出现你编辑的第二篇博客啦。
+若要在github pages预览html文件，请见下一篇博客^-^"/>
 
 	
   </head>
@@ -147,18 +168,35 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>尝试一下修改
-因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。</p>
-<h2 id="第一步安装hugo">第一步：安装hugo</h2>
-<p>查看<a href="https://gohugo.io/getting-started/installing">官方文档</a>进行安装，文档上有详细的安装步骤可进行查看。</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>因为我的电脑是Windows系统，因此此篇文章的操作仅适用在Windows系统中，对于其他系统的用户，借鉴意义不大。</p>
+<h1 id="一安装hugo">一、安装hugo</h1>
+<p>查看<a href="https://gohugo.io/getting-started/installing">官方文档</a>进行安装，以下步骤若有不清楚的地方，文档上有详细的安装步骤可进行查看。</p>
 <ol>
 <li>点击来到<a href="https://github.com/gohugoio/hugo/releases">hugo release</a>网页，查找最新版本，找到适用于本机系统的zip文件进行下载。</li>
-<li>下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。</li>
-<li>启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。</li>
+<li>下载后进行解压，然后找到hugo.exe文件，复制存放该文件的路径，然后将该路径配置到本电脑的高级系统设置&ndash;环境变量&ndash;path中。例如我的存放路径为D:\Software\hugo，那么配置就如下图所示：
+<img src="../../static/image/1.png" alt="第一张配置图">
+<img src="../../static/image/2.png" alt="第二张配置图"></li>
+<li>启动终端，运行hugo version，若返回安装的版本号，则代表安装成功。
+<img src="../../static/image/3.png" alt="第三张配置图"></li>
 </ol>
-<h2 id="第二步搭建博客">第二步：搭建博客</h2>
-<p>hugo官网上有很详细的步骤说明，点击进入<a href="https://gohugo.io/">hugo官网</a>，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。</p>
+<h1 id="二搭建博客">二、搭建博客</h1>
+<p>hugo官网上有很详细的步骤说明，点击进入<a href="https://gohugo.io/">hugo官网</a>，点击Quick Start，启动终端，新建一个文件夹，然后依次执行官网上的step2~step7中的命令（step1已在第一步中执行），在终端运行命令的时候要注意将quick start重命名。</p>
+<h2 id="step2">step2:</h2>
+<p>新建一个文件夹，在该目录下执行命令：hugo new site name.github.io-generator，注意name是你在github上的账户名，全小写。</p>
+<h2 id="step3">step3：</h2>
+<p>进入上一步创建的目录，即依次执行cd name.github.io-generator&mdash;git init&mdash;git submodule add <a href="https://github.com/budparr/gohugo-theme-ananke.git">https://github.com/budparr/gohugo-theme-ananke.git</a> themes/ananke&mdash;echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml，这一步的目的是下载博客网站的主题。</p>
+<h2 id="step4">step4:</h2>
+<p>执行hugo new posts/my-first-post.md，然后编辑第一篇博客的内容。注意不要修改原有的内容，修改后要将draft改为false。</p>
+<h2 id="step5">step5：</h2>
+<p>执行hugo server -D，可进行网站的预览。</p>
+<h2 id="step6">step6：</h2>
+<p>打开config.toml文件，进行配置，要将图中的baseURL改为自己github上的网址，将languageCode改为zh-Hans，title自定义自己想要的博客名称。
+<img src="../../static/image/4.png" alt="第四张图片"></p>
+<h2 id="step7">step7</h2>
+<p>执行hugo -D，创建public文件。</p>
+<p>执行完毕后会得到一个public目录，这就是我们的博客站点。如果要预览网站，那么就需要在终端上执行hugo server，不能直接打开public下的index.html文件，因为不能使用文件协议进行预览。</p>
 <p>若要创建第二篇博客，则需要在上述创建的根目录中再次执行<code>hugo new posts/自定义博客题目.md</code>，然后打开该文件进行博客的编辑，编辑完成后执行<code>hugo -D</code>，那么在public目录中就会出现你编辑的第二篇博客啦。</p>
+<p>若要在github pages预览html文件，请见下一篇博客^-^</p>
 <ul class="pa0">
   
 </ul>
